@@ -1,6 +1,8 @@
 .contacts {
+  display: grid;
+
   &__content {
-    display: grid;
+    grid-column: span 5;
     row-gap: 48px;
 
     @include onTablet {
@@ -17,13 +19,16 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    width: 280px;
 
     @include onTablet {
       gap: 20px;
+      width: 288px;
     }
 
     @include onDesktop {
       gap: 24px;
+      width: 411px;
     }
   }
 
@@ -70,8 +75,9 @@
   }
 
   &__info {
-    display: grid;
-    row-gap: 24px;
+    display: block;
+    grid-column: 8 / -1;
+    gap: 24px;
     align-items: start;
 
     @include onTablet {
