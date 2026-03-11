@@ -1,34 +1,36 @@
 .contacts {
-  display: grid;
+  display: flex;
+  flex-direction: column;
 
   &__content {
-    grid-column: span 5;
-    row-gap: 48px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
 
     @include onTablet {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       column-gap: 24px;
     }
 
     @include onDesktop {
-      column-gap: 64px;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 24px;
     }
   }
 
   &__form {
+    grid-column: 1 / -1;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    width: 280px;
+    width: 100%;
 
     @include onTablet {
-      gap: 20px;
-      width: 288px;
+      grid-column: span 3;
     }
 
     @include onDesktop {
-      gap: 24px;
-      width: 411px;
+      grid-column: span 5;
     }
   }
 
@@ -50,7 +52,7 @@
 
   &__button {
     height: 56px;
-    width: 280px;
+    width: 100%;
     border-radius: 40px;
     background: #292929;
     color: #fff;
@@ -58,14 +60,6 @@
     border: none;
     transition: 0.3s;
     cursor: pointer;
-
-    @include onTablet {
-      width: 288px;
-    }
-
-    @include onDesktop {
-      width: 411px;
-    }
 
     &:hover {
       background: #fff;
@@ -75,16 +69,21 @@
   }
 
   &__info {
-    display: block;
-    grid-column: 8 / -1;
-    gap: 24px;
-    align-items: start;
+  display: grid;
+  row-gap: 24px;
 
-    @include onTablet {
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 24px;
-    }
+  grid-column: 1 / -1;
+
+  @include onTablet {
+    grid-column: span 3;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 24px;
   }
+
+  @include onDesktop {
+    grid-column: 8 / -1;
+  }
+}
 
   &__label {
     font-size: 12px;
