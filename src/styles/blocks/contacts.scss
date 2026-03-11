@@ -1,0 +1,104 @@
+.contacts {
+  &__content {
+    display: grid;
+    row-gap: 48px;
+
+    @include onTablet {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 24px;
+    }
+
+    @include onDesktop {
+      column-gap: 64px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include onTablet {
+      gap: 20px;
+    }
+
+    @include onDesktop {
+      gap: 24px;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 40px;
+    border: none;
+    background: #f7f7f7;
+    font-size: 14px;
+  }
+
+  &__textarea {
+    height: 120px;
+    border-radius: 16px;
+    resize: none;
+  }
+
+  &__button {
+    height: 56px;
+    width: 280px;
+    border-radius: 40px;
+    background: #292929;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+
+    @include onTablet {
+      width: 288px;
+    }
+
+    @include onDesktop {
+      width: 411px;
+    }
+
+    &:hover {
+      background: #fff;
+      border: 3px solid #292929;
+      color: #292929;
+    }
+  }
+
+  &__info {
+    display: grid;
+    row-gap: 24px;
+    align-items: start;
+
+    @include onTablet {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 24px;
+    }
+  }
+
+  &__label {
+    font-size: 12px;
+    color: #9f9f9f;
+    margin-bottom: 8px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #292929;
+    font-weight: 500;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__item--wide {
+    grid-column: 1 / -1;
+  }
+}
