@@ -2,10 +2,9 @@
   &__content {
     display: grid;
     row-gap: 96px;
-    padding-block: 96px;
+    max-width: 1020px;
 
     @include onTablet {
-      padding-block: 120px;
       row-gap: 120px;
     }
   }
