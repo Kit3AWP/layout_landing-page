@@ -51,8 +51,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s cubic-bezier(.2,.8,.2,1);
+    transform-origin: center center;
 
-    @include hover(transform, scale(1.2));
+    &:hover {
+      transform: scale(1.08);
+    }
   }
 
   &__title {

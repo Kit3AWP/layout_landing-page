@@ -23,21 +23,6 @@
     }
   }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  margin-inline: 0;
-  gap: 96px;
-  padding-block: 96px;
-  justify-content: center;
-  @include contentPaddingInline;
-
-  @include onTablet {
-    gap: 120px;
-    padding-block: 120px;
-  }
-}
-
 @mixin hover($property, $toValue) {
   transition: #{$property} 0.3s;
   &:hover {
@@ -58,5 +43,28 @@
 
   @include onDesktop {
     --columns: 12;
+  }
+}
+
+@keyframes phone-vibrate {
+  0%   { transform: rotate(0) scale(1); }
+  25%  { transform: rotate(-10deg) scale(1.05); }
+  50%  { transform: rotate(10deg) scale(1.05); }
+  75%  { transform: rotate(-10deg) scale(1.05); }
+  100% { transform: rotate(0) scale(1.1); }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-inline: 0;
+  gap: 96px;
+  padding-block: 96px;
+  justify-content: center;
+  @include contentPaddingInline;
+
+  @include onTablet {
+    gap: 120px;
+    padding-block: 120px;
   }
 }
