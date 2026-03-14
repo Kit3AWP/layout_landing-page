@@ -3,6 +3,7 @@
     display: grid;
     row-gap: 96px;
     max-width: 1020px;
+    margin-inline: auto;
 
     @include onTablet {
       row-gap: 120px;

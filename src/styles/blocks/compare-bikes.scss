@@ -13,6 +13,7 @@
 
     @include onDesktop {
       grid-column: span 4;
+      row-gap: 24px;
     }
   }
 }
