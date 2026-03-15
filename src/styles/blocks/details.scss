@@ -1,8 +1,12 @@
 .details {
-  &__wrapper {
-    display: grid;
-    row-gap: 40px;
 
+  &__wrapper {
+    @include pageGrid;
+    & > :nth-child(-n + 3) {
+      grid-column: 1 / -1;
+    }
+
+    row-gap: 40px;
     @include onTablet {
       row-gap: 64px;
     }
@@ -10,6 +14,12 @@
 }
 
 .detail {
+  @include pageGrid;
+
+  & > :nth-child(-n + 2) {
+    grid-column: 1 / -1;
+  }
+
   &__photos {
     @include pageGrid;
 
@@ -18,9 +28,18 @@
   }
 
   &__link {
-    position: relative;
-    overflow: hidden;
-    display: block;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  border: 2px solid transparent;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(#000, #000) padding-box,
+    linear-gradient(45deg, #c9a24a, #f5e6a8, #c9a24a) border-box;
+
+  background-size: 0 0, 0 0;
+  transition: all 0.5s;
 
     &--wide {
       @include onTablet {
@@ -46,17 +65,25 @@
     }
   }
 
+  &__link:hover {
+  background:
+    linear-gradient(#000, #000) padding-box,
+    linear-gradient(45deg, #c9a24a, #f5e6a8, #c9a24a) border-box;
+
+  background-size: auto, auto;
+}
+
+&__link:hover .detail__photo {
+  transform: scale(1.08);
+}
+
   &__photo {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s cubic-bezier(.2,.8,.2,1);
-    transform-origin: center center;
-
-    &:hover {
-      transform: scale(1.08);
-    }
+    transform-origin: center;
   }
 
   &__title {
@@ -67,6 +94,7 @@
   }
 
   &__description {
+    grid-column: 1 / -1;
     font-weight: 400;
 
     @include onDesktop {
@@ -85,21 +113,31 @@
     font-weight: 700;
     grid-column: 1 / -1;
     height: 56px;
+    width: 100%;
     border-radius: 40px;
     background-color: #fff;
     color: #1d1d1d;
     transition: 0.3s;
     cursor: pointer;
 
-    // @include onTablet {
-    //   grid-column: 2 / -2;
-    // }
+    transition: box-shadow 0.3s, transform 0.2s;
 
-    // @include onDesktop {
-    //   grid-column: 4 / -4;
-    // }
+    &:hover {
+      box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.4);
+      transform: scale(1.02);
+    }
 
-    // &:hover {
-    // }
+    &:active {
+      box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.64);
+      transform: translateY(1px);
+    }
+
+    @include onTablet {
+      grid-column: 2 / -2;
+    }
+
+    @include onDesktop {
+      grid-column: 4 / -4;
+    }
   }
 }

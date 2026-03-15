@@ -5,7 +5,7 @@
     text-align: start;
     white-space: nowrap;
     margin: 0;
-    margin-bottom: 8px;
+    margin-bottom: 32px;
     grid-column: 1 / -1;
 
     @include onTablet {
@@ -13,7 +13,7 @@
     }
 
     @include onDesktop {
-      grid-column: span 5;
+      grid-column: span 4;
     }
   }
 
