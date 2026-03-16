@@ -17,11 +17,11 @@
       src="src/scripts/main.js"
       defer
     ></script>
-    <link rel="stylesheet" crossorigin href="/layout_landing-page/assets/index-DPQTC6FZ.css">
+    <link rel="stylesheet" crossorigin href="/layout_landing-page/assets/index-DCxMuFtn.css">
   </head>
   <!-- #endregion -->
   <body class="page__body">
-    <header class="header">
+    <header class="header" id="home">
       <div class="header__content">
         <div class="top-bar">
           <a href="#" class="top-bar__logo">
@@ -58,19 +58,19 @@
           <nav class="nav menu__nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a class="nav__link" href="#">Home</a>
+                <a class="nav__link" href="#home">Home</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">About us</a>
+                <a class="nav__link" href="#about-us">About us</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">Compare bikes</a>
+                <a class="nav__link" href="#compare-bikes">Compare bikes</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">Details</a>
+                <a class="nav__link" href="#details">Details</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">Contacts</a>
+                <a class="nav__link" href="#contacts">Contacts</a>
               </li>
             </ul>
           </nav>
@@ -89,7 +89,7 @@
         <div class="main__content">
 
           <section class="about-us" id="about-us">
-            <h2 class="section-title section-title--align--left">Move Free</h2>
+            <h2 class="section-title section-title--align--left about-us__title">Move Free</h2>
             <div class="about-us__content">
               <p class="about-us__description">
                 Shift your ride, not gears. Find the fastest way to move in the city as the bike adapts intuitively to power the speed you need.
@@ -142,7 +142,7 @@
                   <a href="#" class="detail__link detail__link--wide">
                     <img
                     class="detail__photo"
-                    src="/layout_landing-page/assets/image-1-CZnPt2ba.png"
+                    src="/layout_landing-page/assets/image-1-BTtFBaan.png"
                     alt="Auto unlock"
                     >
                   </a>
@@ -228,7 +228,9 @@
                 class="contacts__textarea"
                 ></textarea>
 
-                <button class="contacts__button">
+                <button
+                type="reset"
+                class="contacts__button">
                   Send
                 </button>
               </form>
@@ -250,11 +252,11 @@
 
                 <div class="contacts__item contacts__item--wide">
                   <p class="contacts__label">Address</p>
-                  <p class="contacts__text">
+                  <a href="400 first ave.suite 700Minneapolis, MN 55401" class="contacts__link">
                     400 first ave.<br>
                     suite 700<br>
                     Minneapolis, MN 55401
-                  </p>
+                  </a>
                 </div>
               </div>
             </div>
