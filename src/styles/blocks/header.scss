@@ -10,11 +10,11 @@
     justify-content: space-between;
     padding: 0 20px;
 
-    @include onTablet {
+    @include on-tablet {
       padding: 0 72px;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       padding: 0 120px;
     }
   }
@@ -22,11 +22,11 @@
   &__bottom {
     padding-bottom: 88px;
 
-    @include onTablet {
+    @include on-tablet {
       padding-bottom: 130px;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       padding-bottom: 200px;
     }
   }
@@ -40,11 +40,11 @@
     color: $main-text-color;
     text-align: center;
 
-    @include onTablet {
+    @include on-tablet {
       font-size: 64px;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       font-size: 80px;
     }
   }

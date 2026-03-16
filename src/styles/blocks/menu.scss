@@ -5,18 +5,18 @@
   text-transform: uppercase;
   padding: 0 20px;
 
-  @include onTablet {
+  @include on-tablet {
     padding: 0 72px;
   }
 
-  @include onDesktop {
+  @include on-desktop {
     padding: 0 120px;
   }
 
   &__top {
     margin-bottom: 32px;
 
-    @include onTablet {
+    @include on-tablet {
       margin-bottom: 0;
     }
   }

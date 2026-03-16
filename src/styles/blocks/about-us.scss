@@ -1,5 +1,5 @@
 .about-us {
-  @include pageGrid;
+  @include page-grid;
 
   &__title {
     text-align: start;
@@ -8,11 +8,11 @@
     margin-bottom: 32px;
     grid-column: 1 / -1;
 
-    @include onTablet {
+    @include on-tablet {
       grid-column: 1 / 4;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       grid-column: span 4;
     }
   }
@@ -20,11 +20,11 @@
   &__content {
     grid-column: 1 / -1;
 
-    @include onTablet {
+    @include on-tablet {
       grid-column: 4 / 7;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       grid-column: 6 / -1;
     }
   }
