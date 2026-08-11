@@ -1,6 +1,6 @@
 # Landing Page
 
-https://kit3awp.github.io/layout_landing-page/ <= Demo Link
+[DEMO LINK](https://kit3awp.github.io/layout_landing-page/)
 
 > ❗❗ You will complete this task in the **Landing** topic.
 > Now just choose a design and do the parts from the videos.
